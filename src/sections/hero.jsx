@@ -51,17 +51,17 @@ const hero = () => {
 
                 <div className="flex items-center justify-start gap-4 mt-2 ">
   {/* Añade la clase 'group' aquí */}
-  <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="social-button group">
+  <a href="https://www.instagram.com/juanvelezdp_/" target="_blank" rel="noopener noreferrer" className="social-button group">
     <div className="bg-circle" />
     <img src="/images/instagram.svg" alt="Instagram" />
   </a>
   {/* Añade la clase 'group' aquí */}
-  <a href="https://www.x.com/" target="_blank" rel="noopener noreferrer" className="social-button group">
+  <a href="https://x.com/juanvelezdp_" target="_blank" rel="noopener noreferrer" className="social-button group">
     <div className="bg-circle" />
     <img src="/images/x.svg" alt="X" />
   </a>
   {/* Añade la clase 'group' aquí */}
-  <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="social-button group">
+  <a href="https://co.linkedin.com/in/juan-david-velez-piedrahita-83389a347" target="_blank" rel="noopener noreferrer" className="social-button group">
     <div className="bg-circle" />
     <img src="/images/linkedin.svg" alt="LinkedIn" />
   </a>
