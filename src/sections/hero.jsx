@@ -46,6 +46,7 @@ const hero = () => {
                     text="Download CV"
                     className="md:w-80 md:h-16 w-60 h-12"
                     id="counter"
+                    href="/assets/juanDavidVelezCV.pdf"
                 />
 
                 <div className="flex items-center justify-start gap-4 mt-2 ">

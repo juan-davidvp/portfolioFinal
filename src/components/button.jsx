@@ -1,6 +1,9 @@
-const Button = ({ text, className, id }) => {
+const Button = ({ text, className, id, href }) => {
   return (
     <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
       className={`${className ?? ''} cta-wrapper`}>
       <div className="cta-button group">
         <div className="bg-circle" />
