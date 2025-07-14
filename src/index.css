@@ -81,16 +81,20 @@ section {
   }
 
   .hero-layout {
-    @apply relative z-10 xl:mt-0 mt-32 md:mt-4 md:h-dvh h-[80vh] flex xl:items-center items-start justify-center;
+    @apply relative z-10 grid w-full grid-cols-1 items-center gap-8 px-5 h-[80vh] md:h-dvh md:grid-cols-2 md:px-10 xl:px-20;
+  }
+
+  .hero-visual-container {
+    @apply flex h-full w-full items-center justify-center;
   }
 
   .hero-text {
-    @apply flex flex-col justify-center md:text-[60px] text-[30px] font-semibold relative z-10 pointer-events-none;
+    @apply flex flex-col justify-center md:text-[64px] text-[32px] font-semibold relative z-10 pointer-events-none;
     img {
-      @apply size-8 md:size-10 object-contain;
+      @apply size-10 md:size-16 object-contain;
     }
     .slide {
-      @apply absolute pt-0 py-[30px] h-[48px] md:h-[78px] md:translate-y-1 translate-y-0 overflow-hidden;
+      @apply absolute pt-0 py-[20px] h-[48px] md:h-[78px] md:translate-y-1 translate-y-0 overflow-hidden;
     }
   }
 
@@ -98,9 +102,41 @@ section {
     @apply bg-black-200 py-2 px-4 rounded-full w-fit text-sm md:text-base text-nowrap;
   }
 
-  .hero-3d-layout {
-    @apply xl:w-[70%] w-full h-full min-h-[50vh] absolute xl:-top-20 top-24 xl:-right-20 right-0;
+  .video-container {
+    @apply rounded-xl;
+    background-color: rgba(129, 116, 160, 0.6);
+    transition: all 0.3s ease;
   }
+
+  .video-container:hover {
+    box-shadow: 0 0 40px #8174a0, 0 0 75px #8174a0, 0 0 90px #8174a0;
+    transform: scale(1.05);
+  }
+
+  .social-button {
+    @apply relative md:size-14 size-8 flex rounded-lg bg-black-200 cursor-pointer overflow-hidden;
+  }
+
+  .social-button .bg-circle {
+      @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+      size-0
+      rounded-full bg-white-50 transition-all duration-500
+      group-hover:size-24;
+  }
+
+  .social-button img {
+      @apply relative md:size-10 size-6 m-auto transition-all duration-500;
+      /* Este filtro convierte el ícono (asumiendo que es negro) al color #2A004E */
+      filter: brightness(0) saturate(100%) invert(100%);
+      
+  }
+
+  .social-button:hover img {
+      /* Cambia el color del ícono a blanco en hover para que contraste con el fondo */
+      filter: invert(11%) sepia(61%) saturate(5135%) hue-rotate(265deg) brightness(91%) contrast(106%);
+  }
+
+
 
   .navbar {
     @apply fixed w-full left-1/2 py-5 px-5 md:px-20 -translate-x-1/2 z-[100] transition-all duration-300 ease-in-out;
