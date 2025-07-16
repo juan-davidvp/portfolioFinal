@@ -27,6 +27,7 @@ section {
   --color-black-200: #282732;
   --color-blue-50: #839cb5;
   --color-blue-100: #2d2d38;
+  --color-purple-50: #9929EA;
 }
 
 @layer utilities {
@@ -105,13 +106,12 @@ section {
   }
 
   .video-container {
-    @apply rounded-xl;
-    background-color: rgba(129, 116, 160, 0.6);
+    @apply rounded-xl bg-purple-50;
     transition: all 0.3s ease;
   }
 
   .video-container:hover {
-    box-shadow: 0 0 40px #8174a0, 0 0 75px #8174a0, 0 0 90px #8174a0;
+    box-shadow: 0 0 10px #5c34ac, 0 0 10px #5c34ac, 0 0 50px #5c34ac;
     transform: scale(1.05);
   }
 
@@ -122,7 +122,7 @@ section {
   .social-button .bg-circle {
       @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
       size-0
-      rounded-full bg-white-50 transition-all duration-500
+      rounded-full bg-white transition-all duration-500
       group-hover:size-24;
   }
 
@@ -135,7 +135,7 @@ section {
 
   .social-button:hover img {
       /* Cambia el color del ícono a blanco en hover para que contraste con el fondo */
-      filter: invert(11%) sepia(61%) saturate(5135%) hue-rotate(265deg) brightness(91%) contrast(106%);
+      filter: brightness(0) saturate(100%) invert(20%) sepia(47%) saturate(7492%) hue-rotate(272deg) brightness(96%) contrast(93%);
   }
 
   /* Hero text slider starts */
@@ -149,6 +149,9 @@ section {
   display: flex;
   flex-direction: column;
   animation: wordSlider 21s infinite cubic-bezier(0.9, 0.01, 0.3, 0.99);
+  img{
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(239deg) brightness(110%) contrast(100%);
+  }
 }
 
 @keyframes wordSlider {
@@ -290,20 +293,20 @@ section {
     .bg-circle {
       @apply absolute -right-10 origin-center top-1/2 -translate-y-1/2 
         w-[120%] h-[120%] group-hover:size-10 group-hover:right-10
-        rounded-full bg-white-50 transition-all duration-500;
+        rounded-full bg-purple-50 transition-all duration-500;
     }
 
     .text {
-      @apply uppercase md:text-lg text-black transition-all duration-500
-        group-hover:text-white-50 group-hover:-translate-x-5 xl:translate-x-0 -translate-x-5;
+      @apply uppercase md:text-lg text-white transition-all duration-500
+        group-hover:text-white group-hover:-translate-x-5 xl:translate-x-0 -translate-x-5;
     }
 
     .arrow-wrapper {
-      @apply group-hover:bg-white-50 size-10 rounded-full absolute right-10 top-1/2 
-        -translate-y-1/2 flex justify-center items-center overflow-hidden;
+      @apply group-hover:bg-purple-50 size-10 rounded-full absolute right-10 top-1/2 
+        -translate-y-1/2 flex justify-center items-center overflow-hidden; 
 
       img {
-        @apply size-5 xl:-translate-y-32 translate-y-0 animate-bounce group-hover:translate-y-0 transition-all duration-500;
+        @apply size-5 xl:-translate-y-32 translate-y-0 animate-bounce group-hover:translate-y-0 transition-all duration-500; filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(239deg) brightness(110%) contrast(100%);
       }
     }
   }

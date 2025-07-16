@@ -27,18 +27,21 @@ const hero = () => {
                                 {words.map((word) => (
                                     <span key={word.text} className='flex items-center md:gap-3 gap-1 pb-2'>
                                     <span>{word.text}</span>
-                                    <img 
+                                    <div className='xl:size-14 md:size-10 size-7 md:p-4 p-2 rounded-full bg-purple-50 center flex  items-center justify-center' >
+                                        <img 
                                         src={word.imgPath} 
                                         alt={word.text} 
-                                        className='xl:size-14 md:size-10 size-7 md:p-4 p-2 rounded-full bg-white-50' 
+                                        
                                     />
+                                    </div>
+                                    
                                     
                                     </span>
                                 ))}
                             </span>
                         </span>
                     </h1>
-                    <p className="text-white-50 md:text-xl text-xs relative z-10 pointer-events-none md:mt-30 mt-15">
+                    <p className="text-white md:text-xl text-xs relative z-10 pointer-events-none md:mt-30 mt-15 font-light">
                         Hi, I'm Juan David Velez, a passionate web developer & designer with a knack for creating stunning websites.
                     </p>
                     
