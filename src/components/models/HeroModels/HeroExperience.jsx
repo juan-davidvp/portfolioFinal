@@ -1,7 +1,6 @@
 import React from 'react'
-import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { Head } from "./Head";
+import HeadFollow from "./HeroFollow"; // Importamos el nuevo componente
 import * as THREE from "three";
 
 const HeroExperience = () => {
@@ -9,7 +8,7 @@ const HeroExperience = () => {
     
 
     <Canvas
-      camera={{ position: [0, 0, 3], fov: 45 }}>
+      camera={{ position: [0, 0, 5], fov: 30 }}>
           <ambientLight intensity={0.2} color="#1a1a40" />
           {/* lamp's light */}
     <spotLight
@@ -52,16 +51,10 @@ const HeroExperience = () => {
     {/* subtle point light for atmospheric tone */}
     <pointLight position={[0, 1, 0]} intensity={10} color="#7209b7" />
     <pointLight position={[1, 2, -2]} intensity={10} color="#0d00a4" />
-          <OrbitControls
-        enablePan={false} // Prevents panning of the scene
-        maxDistance={20} // Maximum distance for zooming out
-        minDistance={5} // Minimum distance for zooming in
-        minPolarAngle={Math.PI / 3.5} // Minimum angle for vertical rotation
-        maxPolarAngle={Math.PI / 1.5} // Maximum angle for vertical rotation
-      />
-        <group position={[0, -1, 0]} scale={[1.3, 1.3, 1.3]}>
+          
+        <group position={[0, -0.7, 0]} scale={[0.8, 0.8, 0.8]}>
 
-          <Head />
+          <HeadFollow />
 
         </group>
         

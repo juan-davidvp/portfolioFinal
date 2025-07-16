@@ -72,7 +72,7 @@ const hero = () => {
         </header>
         {/* RIGHT: 3D Model or Visual */}
         <figure className="hero-visual-container md:pr-44 pr-8">
-            <div className="interactive-container w-132 h-102 ">
+            <div className="interactive-container w-200 h-164 ">
                 <HeroExperience />
             </div>
         </figure>
