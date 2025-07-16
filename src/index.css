@@ -38,6 +38,7 @@ section {
   }
 }
 
+  /* General Paddings */
 @layer components {
   .padding-x {
     @apply px-5 md:px-10;
@@ -80,6 +81,7 @@ section {
     @apply grid grid-cols-1 xl:grid-cols-12 gap-10;
   }
 
+  /* Hero Styles */
   .hero-layout {
     @apply relative z-10 grid w-full grid-cols-1 items-center gap-8 px-5 h-[80vh] md:h-dvh md:grid-cols-2 md:px-10 xl:px-20;
   }
@@ -136,6 +138,46 @@ section {
       filter: invert(11%) sepia(61%) saturate(5135%) hue-rotate(265deg) brightness(91%) contrast(106%);
   }
 
+  /* Hero text slider starts */
+.slide {
+  display: inline-block;
+  flex-direction: column;
+  transition: all cubic-bezier(0.71, 0.03, 0.34, 1);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  animation: wordSlider 21s infinite cubic-bezier(0.9, 0.01, 0.3, 0.99);
+}
+
+@keyframes wordSlider {
+  0% {
+    transform: translateY(0.5%);
+  }
+  16.7% {
+    transform: translateY(-16.7%);
+  }
+  33.4% {
+    transform: translateY(-33.4%);
+  }
+  50.1% {
+    transform: translateY(-50.1%);
+  }
+  66.8% {
+    transform: translateY(-66.8%);
+  }
+  83.5% {
+    transform: translateY(-83.5%);
+  }
+}
+
+/* Hero Text slider ends */
+
+
+  .hero-3d-layout {
+    @apply xl:w-[70%] w-full h-full min-h-[50vh] absolute xl:-top-20 top-24 xl:-right-20 right-0;
+  }
 
 
   .navbar {
@@ -358,41 +400,7 @@ section {
   }
 }
 
-/* Hero text slider starts */
-.slide {
-  display: inline-block;
-  flex-direction: column;
-  transition: all cubic-bezier(0.71, 0.03, 0.34, 1);
-}
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  animation: wordSlider 21s infinite cubic-bezier(0.9, 0.01, 0.3, 0.99);
-}
-
-@keyframes wordSlider {
-  0% {
-    transform: translateY(0.5%);
-  }
-  16.7% {
-    transform: translateY(-16.7%);
-  }
-  33.4% {
-    transform: translateY(-33.4%);
-  }
-  50.1% {
-    transform: translateY(-50.1%);
-  }
-  66.8% {
-    transform: translateY(-66.8%);
-  }
-  83.5% {
-    transform: translateY(-83.5%);
-  }
-}
-
-/* Hero Text slider ends */
 
 .gradient-line {
   width: 2px;

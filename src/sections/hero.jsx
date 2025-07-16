@@ -1,11 +1,11 @@
-import React from 'react'
 import { words } from '../constants/index.js'
-import Button from "../components/button";
-
+import Button from "../components/button.jsx";
+import HeroExperience from "../components/models/HeroModels/HeroExperience";
 
 const hero = () => {
   return (
     <section id='hero' className='relative overflow-hidden'>
+
         <div className='absolute top-0 left-0 z-10'>
             <img src="/images/bg.png" alt="background" />
         </div>
@@ -15,6 +15,7 @@ const hero = () => {
         </div>
 
         <div className='hero-layout'>
+
         {/*LEFT: HERO CONTECT*/}
         <header className='flex flex-col justify-center md:w-full w-screen md:px-44 px-8 md:pt-0 pt-14'>
             <div className='flex flex-col gap-7'>
@@ -50,37 +51,26 @@ const hero = () => {
                 />
 
                 <div className="flex items-center justify-start gap-4 mt-2 ">
-  {/* Añade la clase 'group' aquí */}
-  <a href="https://www.instagram.com/juanvelezdp_/" target="_blank" rel="noopener noreferrer" className="social-button group">
-    <div className="bg-circle" />
-    <img src="/images/instagram.svg" alt="Instagram" />
-  </a>
-  {/* Añade la clase 'group' aquí */}
-  <a href="https://x.com/juanvelezdp_" target="_blank" rel="noopener noreferrer" className="social-button group">
-    <div className="bg-circle" />
-    <img src="/images/x.svg" alt="X" />
-  </a>
-  {/* Añade la clase 'group' aquí */}
-  <a href="https://co.linkedin.com/in/juan-david-velez-piedrahita-83389a347" target="_blank" rel="noopener noreferrer" className="social-button group">
-    <div className="bg-circle" />
-    <img src="/images/linkedin.svg" alt="LinkedIn" />
-  </a>
-</div>
-
-
+                    <a href="https://www.instagram.com/juanvelezdp_/" target="_blank" rel="noopener noreferrer" className="social-button group">
+                        <div className="bg-circle" />
+                        <img src="/images/instagram.svg" alt="Instagram" />
+                    </a>
+                    <a href="https://x.com/juanvelezdp_" target="_blank" rel="noopener noreferrer" className="social-button group">
+                        <div className="bg-circle" />
+                        <img src="/images/x.svg" alt="X" />
+                    </a>
+                    <a href="https://co.linkedin.com/in/juan-david-velez-piedrahita-83389a347" target="_blank" rel="noopener noreferrer" className="social-button group">
+                        <div className="bg-circle" />
+                        <img src="/images/linkedin.svg" alt="LinkedIn" />
+                    </a>
+                </div>
+                
             </div>
         </header>
         {/* RIGHT: 3D Model or Visual */}
         <figure className="hero-visual-container">
             <div className="video-container md:w-auto w-70 ">
-                <video
-                    src="/videos/EmojiMovie.mov"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="rounded-lg"
-                ></video>
+                <HeroExperience />
             </div>
         </figure>
         </div>
