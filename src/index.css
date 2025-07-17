@@ -105,25 +105,20 @@ section {
     @apply bg-black-200 py-2 px-4 rounded-full w-fit text-sm md:text-base text-nowrap;
   }
 
-.interactive-container {
-    @apply rounded-4xl p-4 transition-all duration-300 ease-in-out aspect-square bg-black-200 ;
+  .neon-effect{
+    @apply bg-black-200/50 transition-all duration-300 ease-in-out aspect-square ;
   }
 
-  .interactive-container:hover {
+  .neon-effect:hover {
     @apply bg-purple-950;
     box-shadow: 0 0 10px #5c34ac, 0 0 10px #5c34ac, 0 0 50px #5c34ac;
-    transform: scale(1.05);
+    transform: scale(1.05);}
 
-    .name-container{
-      @apply bg-purple-50;
-    }
+.interactive-container {
+    @apply rounded-4xl w-full h-[250px] md:h-[350px];
   }
 
-    .name-container{
-    @apply px-3 py-3 rounded-lg bg-purple-950 flex justify-center items-center relative cursor-pointer overflow-hidden transition-all duration-500;
-  }
-
-
+  
 
   .social-button {
     @apply relative md:size-14 size-8 flex rounded-lg bg-black-200 cursor-pointer overflow-hidden;
