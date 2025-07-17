@@ -42,12 +42,12 @@ const hero = () => {
                         </span>
                     </h1>
                     <p className="text-white md:text-xl text-xs relative z-10 pointer-events-none md:mt-30 mt-15 font-light">
-                        Hi, I'm Juan David Velez, a passionate web developer & designer with a knack for creating stunning websites.
+                        I build bridges between code and design to create digital experiences that not only work, but also fascinate. I am a full stack developer with the vision of a multimedia designer.
                     </p>
                     
                 </div>
                 <Button
-                    text="Download CV"
+                    text="See My Work"
                     className="md:w-80 md:h-16 w-60 h-12"
                     id="counter"
                     href="/assets/juanDavidVelezCV.pdf"
@@ -72,8 +72,17 @@ const hero = () => {
         </header>
         {/* RIGHT: 3D Model or Visual */}
         <figure className="hero-visual-container md:pr-44 pr-8">
-            <div className="interactive-container w-200 h-164 ">
+            <div className="interactive-container w-142 h-126 flex-col-center">
                 <HeroExperience />
+                
+                    <a href="/assets/juanDavidVelezCV.pdf" className='md:w-120 md:h-16 w-60 h-12 cta-wrapper'>
+                    <div className='name-container'>
+                        <p className='md:text-lg text-xl text-white tracking-widest uppercase font-bold'>
+                        Juan David Velez 
+                        </p>
+                        </div>
+                    </a>
+                
             </div>
         </figure>
         </div>
