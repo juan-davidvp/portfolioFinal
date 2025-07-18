@@ -110,7 +110,7 @@ const hero = () => {
                         <div className="bg-circle" />
                         <img src="/images/instagram.svg" alt="Instagram" />
                     </a>
-                    <a href="https://x.com/juanvelezdp_" target="_blank" rel="noopener noreferrer" className="social-button group">
+                    <a href="https://github.com/juan-davidvp" target="_blank" rel="noopener noreferrer" className="social-button group">
                         <div className="bg-circle" />
                         <img src="/images/x.svg" alt="X" />
                     </a>
