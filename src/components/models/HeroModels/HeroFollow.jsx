@@ -40,8 +40,8 @@ const HeadFollow = (props) => {
         const { x, y } = state.pointer;
         // Definimos la rotación objetivo basada en la posición del mouse.
         // El factor de multiplicación controla la sensibilidad del movimiento.
-        targetRotationY = x * Math.PI * 0.25;
-        targetRotationX = -y * Math.PI * 0.25;
+        targetRotationY = x * Math.PI * 0.15;
+        targetRotationX = -y * Math.PI * 0.15;
       } else {
         // Si el mouse no está sobre el lienzo, se activa la animación inactiva.
         // Usamos el tiempo transcurrido para crear un movimiento de balanceo suave.

@@ -26,11 +26,19 @@ const words = [
   { text: "Designer", imgPath: "/images/designs.svg" },
 ];
 
+const movingBarWords = [
+  "Web Desing",
+  "Web Development",
+  "Graphic Design",
+  "UI/UX Design",
+  "Branding",
+  "Motion"
+];
+
 const counterItems = [
-  { value: 15, suffix: "+", label: "Years of Experience" },
-  { value: 200, suffix: "+", label: "Satisfied Clients" },
-  { value: 108, suffix: "+", label: "Completed Projects" },
-  { value: 90, suffix: "%", label: "Client Retention Rate" },
+  { value: 1, suffix: "+", label: "Years of Experience" },
+  { value: 5, suffix: "+", label: "Satisfied Clients" },
+  { value: 10, suffix: "+", label: "Completed Projects" }
 ];
 
 const logoIconsList = [
@@ -270,6 +278,7 @@ const socialImgs = [
 
 export {
   words,
+  movingBarWords,
   abilities,
   logoIconsList,
   counterItems,

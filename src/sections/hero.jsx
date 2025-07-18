@@ -1,9 +1,34 @@
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+
 import { words } from '../constants/index.js'
 import Button from "../components/button.jsx";
+import MovingBar from '../components/MovingBar.jsx'
+
 import HeroExperience from "../components/models/HeroModels/HeroExperience";
 
+
+
+
 const hero = () => {
-  return (
+
+    // GSAP animation for the hero section
+    useGSAP(() => {
+        gsap.fromTo('.hero-text h1',
+            {
+                y: 50,
+                opacity: 0,
+            },{
+                y: 0,
+                opacity: 1,
+                stagger: 0.6,
+                duration: 1.6,
+                ease: "power2.out"
+            },)
+            
+            });
+
+    return (
     <section id='hero' className='relative overflow-hidden'>
 
         {/* Background Images */}
@@ -27,7 +52,7 @@ const hero = () => {
                 
                 
             </div>
-            <div className="flex-col-center gap-3 md:gap-6 w-full pt-2">
+            <div className="flex-col-center gap-3 md:gap-6 w-full">
                         <h2 className="text-xl md:text-3xl font-bold text-white">Juan David Velez</h2>
                         <a
                             href="/assets/juanDavidVelezCV.pdf"
@@ -35,8 +60,7 @@ const hero = () => {
                             rel="noopener noreferrer"
                             className="w-full group"
                         >
-                            <div className="bg-purple-50 group-hover:bg-purple-50/90 transition-colors 
-                            duration-300 text-white font-normal md:font-semibold py-2 md:py-3 px-3 md:px-6 rounded-xl flex-center gap-3">
+                            <div className="btn-model">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                                 <span>Download CV</span>
                             </div>
@@ -58,7 +82,7 @@ const hero = () => {
                                 {words.map((word) => (
                                     <span key={word.text} className='flex items-center md:gap-3 gap-2 pb-2'>
                                     <span>{word.text}</span>
-                                    <div className='xl:size-14 md:size-10 size-7 md:p-4 p-2 rounded-full bg-purple-50 center flex  items-center justify-center' >
+                                    <div className='xl:size-14 md:size-10 size-7 md:p-4 p-2 rounded-full bg-purple-900 center flex  items-center justify-center' >
                                         <img 
                                         src={word.imgPath} 
                                         alt={word.text} 
@@ -97,8 +121,12 @@ const hero = () => {
                 </div>
                 
             </div>
+            
         </header>
+        
         </div>
+        <MovingBar />
+        
     </section>
     )
 }
