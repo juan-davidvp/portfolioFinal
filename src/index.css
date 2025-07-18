@@ -84,12 +84,55 @@ section {
 
   /* Hero Styles */
   .hero-layout {
-    @apply relative flex flex-col lg:flex-row gap-20  z-10  w-full   px-5 h-[80vh] md:h-dvh md:px-40 xl:px-80;
+    @apply relative flex flex-col justify-center items-center lg:flex-row gap-18 lg:gap-20   
+    z-10 w-full h-dvh px-6 md:px-40 xl:px-80;
   }
 
   .hero-visual-container {
-    @apply flex h-full w-full items-center justify-center;
+    @apply flex md:h-full md:w-full items-center justify-center;
   }
+
+  .neon-effect{
+    @apply bg-black-200 rounded-xl md:rounded-3xl
+    p-4 md:p-6 
+    gap-4 w-full max-w-[300px] md:max-w-[440px]  
+    transition-all duration-250 ease-in-out aspect-square;
+    position: relative;
+  }
+
+  .neon-effect::after{
+    @apply absolute inset-[-3px] md:inset-[-5px] -z-1 rounded-xl md:rounded-3xl;
+    --angle: 0deg;
+    content: '';
+    background: conic-gradient(from var(--angle),transparent 30%,#3B2763, #5C34AC, #9929EA);
+    animation: rotate-colors 7.5s linear infinite;
+  }
+
+  .neon-effect:hover::after {
+    animation: none;
+    background: none;
+  }
+
+  .neon-effect:hover {
+    @apply bg-purple-950;
+    box-shadow: 0 0 10px #5c34ac, 0 0 10px #5c34ac, 0 0 50px #5c34ac;
+    transform: scale(1.05);
+  }
+
+  @property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+  }
+
+@keyframes rotate-colors{
+  from{
+    --angle: 0deg;
+  }
+  to{
+    --angle: 360deg;
+  }
+}
 
   .hero-text {
     @apply flex flex-col justify-center md:text-[64px] text-[32px] font-semibold relative z-10 pointer-events-none;
@@ -105,20 +148,39 @@ section {
     @apply bg-black-200 py-2 px-4 rounded-full w-fit text-sm md:text-base text-nowrap;
   }
 
-  .neon-effect{
-    @apply bg-black-200/50 transition-all duration-300 ease-in-out aspect-square ;
-  }
-
-  .neon-effect:hover {
-    @apply bg-purple-950;
-    box-shadow: 0 0 10px #5c34ac, 0 0 10px #5c34ac, 0 0 50px #5c34ac;
-    transform: scale(1.05);}
-
 .interactive-container {
-    @apply rounded-4xl w-full h-[250px] md:h-[350px];
+    @apply rounded-4xl w-full h-[212px] md:h-[350px];
   }
 
-  
+  .cta-wrapper {
+    @apply relative z-20 cursor-pointer;
+  }
+
+  .cta-button {
+    @apply p-3 md:p-4 rounded-lg bg-black-200 flex justify-center 
+    items-center relative cursor-pointer overflow-hidden;
+
+  .bg-circle {
+    @apply absolute -right-10 origin-center top-1/2 -translate-y-1/2 
+      w-[140%] md:w-[120%] h-[100%] md:h-[120%] group-hover:size-10 group-hover:right-10
+      rounded-full bg-purple-50 transition-all duration-500;
+  }
+
+    .text {
+      @apply uppercase text-xs md:text-lg text-white transition-all duration-500
+        group-hover:text-white group-hover:-translate-x-5 xl:translate-x-0 
+        -translate-x-5;
+    }
+
+    .arrow-wrapper {
+      @apply group-hover:bg-purple-50 size-10 rounded-full absolute right-10 top-1/2 
+        -translate-y-1/2 flex justify-center items-center overflow-hidden; 
+
+      img {
+        @apply size-4 md:size-5 xl:-translate-y-32 translate-y-0 animate-bounce group-hover:translate-y-0 transition-all duration-500; filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(239deg) brightness(110%) contrast(100%);
+      }
+    }
+  }
 
   .social-button {
     @apply relative md:size-14 size-8 flex rounded-lg bg-black-200 cursor-pointer overflow-hidden;
@@ -160,6 +222,10 @@ section {
     filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(239deg) brightness(110%) contrast(100%);
   }
 }
+
+
+
+
 
 @keyframes wordSlider {
   0% {
@@ -290,33 +356,7 @@ section {
     }
   }
 
-  .cta-wrapper {
-    @apply relative z-20 cursor-pointer;
-  }
-
-  .cta-button {
-    @apply px-4 py-4 rounded-lg bg-black-200 flex justify-center items-center relative cursor-pointer overflow-hidden;
-
-  .bg-circle {
-    @apply absolute -right-10 origin-center top-1/2 -translate-y-1/2 
-      w-[120%] h-[120%] group-hover:size-10 group-hover:right-10
-      rounded-full bg-purple-50 transition-all duration-500;
-  }
-
-    .text {
-      @apply uppercase md:text-lg text-white transition-all duration-500
-        group-hover:text-white group-hover:-translate-x-5 xl:translate-x-0 -translate-x-5;
-    }
-
-    .arrow-wrapper {
-      @apply group-hover:bg-purple-50 size-10 rounded-full absolute right-10 top-1/2 
-        -translate-y-1/2 flex justify-center items-center overflow-hidden; 
-
-      img {
-        @apply size-5 xl:-translate-y-32 translate-y-0 animate-bounce group-hover:translate-y-0 transition-all duration-500; filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(239deg) brightness(110%) contrast(100%);
-      }
-    }
-  }
+ 
 
   .card-border {
     @apply border border-black-50 bg-black-100;

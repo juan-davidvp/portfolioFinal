@@ -52,7 +52,7 @@ const HeroExperience = () => {
     <pointLight position={[0, 1, 0]} intensity={10} color="#7209b7" />
     <pointLight position={[1, 2, -2]} intensity={10} color="#0d00a4" />
           
-        <group position={[0, -0.7, 0]} scale={[0.8, 0.8, 0.8]}>
+        <group position={[0, -0.9, 0]} scale={[0.95, 0.95, 0.95]}>
 
           <HeadFollow />
 
