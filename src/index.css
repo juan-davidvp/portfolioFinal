@@ -375,11 +375,6 @@ section {
 /* --- FIN DE LOS ESTILOS --- */
 
 
-  .hero-3d-layout {
-    @apply xl:w-[70%] w-full h-full min-h-[50vh] absolute xl:-top-20 top-24 xl:-right-20 right-0;
-  }
-
-
   .navbar {
     @apply fixed w-full md:w-320 left-1/2 py-5 px-5 md:px-20 -translate-x-1/2 z-[100] transition-all duration-300 ease-in-out;
 
@@ -480,6 +475,33 @@ section {
     }
   }
 
+  .showcase-controls {
+  @apply  flex justify-between items-center px-2;
+  /* Posiciona los botones fuera del contenedor principal si es necesario */
+
+  pointer-events: none; /* Permite hacer clic a través del contenedor */
+}
+
+.control-button {
+  @apply w-12 h-12 bg-neutral-800/50 border border-neutral-700 rounded-full text-white text-2xl flex items-center justify-center hover:bg-neutral-700 transition-colors cursor-pointer;
+  pointer-events: all; /* Asegura que los botones sean clickeables */
+}
+
+/* Ajustes para pantallas más pequeñas donde los botones podrían superponerse */
+@media (max-width: 1400px) {
+  .showcase-controls {
+    left: -1rem;
+    right: -1rem;
+    width: calc(100% + 2rem);
+  }
+}
+
+@media (max-width: 1024px) {
+    .showcase-controls {
+        @apply relative top-auto left-auto right-auto w-full justify-center mt-8 gap-4;
+        transform: none;
+    }
+}
 
   .card-border {
     @apply border border-black-50 bg-black-100;
@@ -681,3 +703,5 @@ section {
 .card:hover::before {
   opacity: 1;
 }
+
+

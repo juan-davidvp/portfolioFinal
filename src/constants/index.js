@@ -32,13 +32,45 @@ const movingBarWords = [
   "Graphic Design",
   "UI/UX Design",
   "Branding",
-  "Motion"
+  "Motion" 
 ];
 
 const counterItems = [
   { value: 1, suffix: "+", label: "Years of Experience" },
   { value: 5, suffix: "+", label: "Satisfied Clients" },
   { value: 10, suffix: "+", label: "Completed Projects" }
+];
+
+const projects = [
+  { image: "/images/soulAir.png",
+    color: "bg-green-100",
+    title: "SoulAir: Connecting Citizens with Air Quality Through UI/UX.", 
+    link: "https://www.figma.com/proto/j9HtLxtX38pqm0eRfKrDJp/Prototipo-redise%C3%B1ado?page-id=2311%3A2&node-id=2508-122&viewport=1992%2C542%2C0.25&t=Ert65wAvHHxOoebN-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=2311%3A3",
+    btnlogo: "/images/figma.svg",
+    description: "Soul Air empathizes with users by providing crucial information about air quality. Its key features include presenting complex data in an interactive and educational way, using augmented reality maps, healthy routes, and personalized news."
+  },
+  { image: "/images/styleTransfer.png",
+    color: "bg-amber-100",
+    title: "GAN-based facial style transfer for digital image transformation.", 
+    link: "https://colab.research.google.com/drive/1ejOXq5Hhfqp-URS8Z9IxfJ_nTyM8JlVF?usp=sharing#scrollTo=rqokPe_QJ9MN",
+    btnlogo: "/images/x.svg",
+    description: "AI to merge the user's face with pre-Columbian cultural elements from the Calima and Quimbaya civilizations, generating a stylized image that preserves the original facial identity with high artistic and cultural value."
+  },
+  { image: "/images/daviviendaWeb.png",
+    color: "bg-red-100",
+    title: "Recreation of the Davivienda website with Node.js and MySQL for user management.", 
+    link: "https://github.com/juan-davidvp/ProyectoFinalWebNodeJS.git",
+    btnlogo: "/images/x.svg",
+    description: "Soul Air empathizes with users by providing crucial information about air quality. Its key features include presenting complex data in an interactive and educational way, using augmented reality maps, healthy routes, and personalized news."
+  },
+  { image: "/images/fenadeco.png",
+    color: "bg-blue-300",
+    title: "FENADECO Website Redesign and Development: Optimizing the Digital Experience", 
+    link: "https://www.figma.com/proto/m36yRQpRMTpUz22dTwVaGk/Fenadeco?page-id=0%3A1&node-id=61-18&viewport=563%2C1042%2C0.1&t=cmloiKfdwP5o7Ulo-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=61%3A18",
+    btnlogo: "/images/figma.svg",
+    description: "Soul Air empathizes with users by providing crucial information about air quality. Its key features include presenting complex data in an interactive and educational way, using augmented reality maps, healthy routes, and personalized news."
+  },
+
 ];
 
 const logoIconsList = [
@@ -280,6 +312,7 @@ export {
   words,
   movingBarWords,
   abilities,
+  projects,
   logoIconsList,
   counterItems,
   expCards,
