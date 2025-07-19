@@ -46,7 +46,7 @@ const HeadFollow = (props) => {
         // Si el mouse no está sobre el lienzo, se activa la animación inactiva.
         // Usamos el tiempo transcurrido para crear un movimiento de balanceo suave.
         const time = state.clock.getElapsedTime();
-        targetRotationY = Math.sin(time * 0.9) * 0.2; // Movimiento horizontal
+        targetRotationY = Math.sin(time * 0.7) * 0.2; // Movimiento horizontal
         targetRotationX = Math.cos(time * 0.5) * 0.17;  // Movimiento vertical
       }
 

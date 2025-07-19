@@ -52,8 +52,8 @@ const hero = () => {
                 
                 
             </div>
-            <div className="flex-col-center gap-3 md:gap-6 w-full">
-                        <h2 className="text-xl md:text-3xl font-bold text-white">Juan David Velez</h2>
+            <div className="flex-col-center gap-1 md:gap-4 w-full">
+                        <h2 className="text-lg md:text-3xl font-bold text-white">Juan David Velez</h2>
                         <a
                             href="/assets/juanDavidVelezCV.pdf"
                             target="_blank"
