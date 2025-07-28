@@ -1,7 +1,7 @@
 const navLinks = [
   {
-    name: "Work",
-    link: "#work",
+    name: "Projects",
+    link: "#projects",
   },
   {
     name: "Experience",
@@ -10,10 +10,6 @@ const navLinks = [
   {
     name: "Skills",
     link: "#skills",
-  },
-  {
-    name: "Testimonials",
-    link: "#testimonials",
   },
 ];
 
@@ -54,21 +50,20 @@ const projects = [
     title: "GAN-based facial style transfer for digital image transformation.", 
     link: "https://colab.research.google.com/drive/1ejOXq5Hhfqp-URS8Z9IxfJ_nTyM8JlVF?usp=sharing#scrollTo=rqokPe_QJ9MN",
     btnlogo: "/images/x.svg",
-    description: "AI to merge the user's face with pre-Columbian cultural elements from the Calima and Quimbaya civilizations, generating a stylized image that preserves the original facial identity with high artistic and cultural value."
+    description: "AI to merge the user's face with Pre-Colombian cultural elements from the Calima and Quimbaya civilizations, generating a stylized image that preserves the original facial identity with high artistic and cultural value using PyTorch."
   },
   { image: "/images/daviviendaWeb.png",
     color: "bg-red-100",
     title: "Recreation of the Davivienda website with Node.js and MySQL for user management.", 
     link: "https://github.com/juan-davidvp/ProyectoFinalWebNodeJS.git",
     btnlogo: "/images/x.svg",
-    description: "Soul Air empathizes with users by providing crucial information about air quality. Its key features include presenting complex data in an interactive and educational way, using augmented reality maps, healthy routes, and personalized news."
-  },
+    description: "Imitation of the Davivienda bank website using Bootstrap for user registration and login management with a MySQL database and Node.js, complying with basic web security protocols."  },
   { image: "/images/fenadeco.png",
     color: "bg-blue-300",
     title: "FENADECO Website Redesign and Development: Optimizing the Digital Experience", 
     link: "https://www.figma.com/proto/m36yRQpRMTpUz22dTwVaGk/Fenadeco?page-id=0%3A1&node-id=61-18&viewport=563%2C1042%2C0.1&t=cmloiKfdwP5o7Ulo-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=61%3A18",
     btnlogo: "/images/figma.svg",
-    description: "Soul Air empathizes with users by providing crucial information about air quality. Its key features include presenting complex data in an interactive and educational way, using augmented reality maps, healthy routes, and personalized news."
+    description: "FENADECO's website redesign and development project focused on enhancing the user experience through a modern, responsive design. The project involved creating a visually appealing interface that is easy to navigate, ensuring that users can access information efficiently and effectively."
   },
 
 ];
@@ -111,19 +106,24 @@ const logoIconsList = [
 
 const abilities = [
   {
-    imgPath: "/images/seo.png",
-    title: "Quality Focus",
-    desc: "Delivering high-quality results while maintaining attention to every detail.",
+    imgPath: "/images/skills/team.svg",
+    title: "Team Collaboration",
+    desc: "I collaborate in teams to integrate roles and achieve common goals.",
   },
   {
-    imgPath: "/images/chat.png",
-    title: "Reliable Communication",
-    desc: "Keeping you updated at every step to ensure transparency and clarity.",
+    imgPath: "/images/skills/brain.svg",
+    title: "Critical Thinking",
+    desc: "I analyze problems to propose technical and creative solutions",
   },
   {
-    imgPath: "/images/time.png",
-    title: "On-Time Delivery",
-    desc: "Making sure projects are completed on schedule, with quality & attention to detail.",
+    imgPath: "/images/skills/clock.svg",
+    title: "Project Management",
+    desc: "I plan and execute tasks with agile methodologies to meet objectives.",
+  },
+  {
+    imgPath: "/images/skills/chat.svg",
+    title: "Effective Communication",
+    desc: "I articulate ideas clearly, facilitating dialogue with clients",
   },
 ];
 
@@ -185,60 +185,34 @@ const techStackIcons = [
 
 const expCards = [
   {
+    job: "UI Web Designer",
+    jobDate: "June 2025 - July 2025",
     review:
-      "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
-    imgPath: "/images/exp1.png",
-    logoPath: "/images/logo1.png",
-    title: "Frontend Developer",
-    date: "January 2023 - Present",
-    responsibilities: [
-      "Developed and maintained user-facing features for the Hostinger website.",
-      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-      "Optimized web applications for maximum speed and scalability.",
-    ],
+      "Project to redesign the official Fenadeco website based on criteria of interactivity, accessibility, and intuitive navigation, as well as implementing the complete solution in CMS Wordpress.",
+    imgPath: "/images/exp-02.png",
+    logoPath: "/images/logo-01.png",
+    title: "Ingenieria Multimedia",
+    institution: "West Autonomous University - Colombia",
+    date: "January 2022 - June 2026",
   },
   {
-    review:
-      "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
-    imgPath: "/images/exp2.png",
-    logoPath: "/images/logo2.png",
-    title: "Full Stack Developer",
-    date: "June 2020 - December 2023",
-    responsibilities: [
-      "Led the development of Docker's web applications, focusing on scalability.",
-      "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-      "Contributed to open-source projects that were used with the Docker ecosystem.",
-    ],
+    job: "Motion Graphic Designer",
+    jobDate: "April 2025 - June 2025",
+    review: "Project commissioned to develop audiovisual content using the Adobe Suit focused on raising awareness of Colpensiones' Periodic Economic Benefits (BEPS).",
+    imgPath: "/images/exp-01.png",
+    logoPath: "/images/logo-02.png",
+    title: "Bootcamp Programación Web Full Stack",
+    institution: "Cymetria - Unicuses - Colombia",
+    date: "July 2025 - September 2025",
   },
   {
-    review:
-      "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
-    imgPath: "/images/exp3.png",
-    logoPath: "/images/logo3.png",
-    title: "React Native Developer",
-    date: "March 2019 - May 2020",
-    responsibilities: [
-      "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-      "Improved app performance and user experience through code optimization and testing.",
-      "Coordinated with the product team to implement features based on feedback.",
-    ],
+    logoPath: "/images/logo-03.png",
+    title: "Diplmado en Programación con Énfasis en Aplicaciones Web",
+    institution: "Caldas University - Colombia",
+    date: "May 2021 - December 2021",
   },
 ];
 
-const expLogos = [
-  {
-    name: "logo1",
-    imgPath: "/images/logo1.png",
-  },
-  {
-    name: "logo2",
-    imgPath: "/images/logo2.png",
-  },
-  {
-    name: "logo3",
-    imgPath: "/images/logo3.png",
-  },
-];
 
 const testimonials = [
   {
@@ -316,7 +290,6 @@ export {
   logoIconsList,
   counterItems,
   expCards,
-  expLogos,
   testimonials,
   socialImgs,
   techStackIcons,

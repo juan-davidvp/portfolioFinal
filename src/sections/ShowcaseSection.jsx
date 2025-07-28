@@ -39,6 +39,7 @@ const ShowcaseSection = () => {
                         trigger: card,
                         start: "top bottom-=100",
                         toggleActions: "play none none none",
+                        markers: false,
                     },
                 }
             );
@@ -132,11 +133,11 @@ const ShowcaseSection = () => {
 
     return (
         <section ref={sectionRef} className='app-showcase'>
-             <div className="showcase-controls">
-                                      <button onClick={() => handleTransition('next')} disabled={isAnimating} className="control-button">&lt;</button>
+             <div className="showcase-controls ml-10">
+                    <button onClick={() => handleTransition('next')} disabled={isAnimating} className="control-button"> <img src="/images/arrow.svg" alt="" className="-rotate-90"/> </button>
                 </div>
-             <div className='showcase-container-wrapper'>
-                <div id='work' className='showcase-content-layout'>
+             <div id='projects' className='app-showcase px-12'>
+                <div className='w-full'>
                     <div className='showcaselayout'>
                         {/* Se añade una clave (key) única al contenedor principal de cada proyecto. */}
                         {/* Esto ayuda a React y GSAP a identificar correctamente los elementos después de un re-render. */}
@@ -172,7 +173,7 @@ const ShowcaseSection = () => {
                                         <div className="md:px-4 md:mt-5">
                                             <a href={secondProject.link} target="_blank" rel="noopener noreferrer" className="social-button group">
                                                 <div className="bg-circle" />
-                                                <img src={secondProject.btnlogo} alt="Project link" className="p-1.5" />
+                                                <img src={secondProject.btnlogo} alt="Project link" className="p-3" />
                                             </a>
                                         </div>
                                     </div>
@@ -188,7 +189,7 @@ const ShowcaseSection = () => {
                                         <div className="md:px-4 md:mt-5">
                                             <a href={thirdProject.link} target="_blank" rel="noopener noreferrer" className="social-button group">
                                                 <div className="bg-circle" />
-                                                <img src={thirdProject.btnlogo} alt="Project link" className="p-1.5" />
+                                                <img src={thirdProject.btnlogo} alt="Project link" className="p-3" />
                                             </a>
                                         </div>
                                     </div>
@@ -200,9 +201,9 @@ const ShowcaseSection = () => {
                 {/* --- Botones de Navegación del Slider --- */}
                
             </div>
-             <div className="showcase-controls">
+             <div className="showcase-controls mr-10">
 
-                    <button onClick={() => handleTransition('prev')} disabled={isAnimating} className="control-button">&gt;</button>
+                    <button onClick={() => handleTransition('prev')} disabled={isAnimating} className="control-button"> <img src="/images/arrow.svg" alt="" className="rotate-90"/> </button>
                 </div>
         </section>
     );
